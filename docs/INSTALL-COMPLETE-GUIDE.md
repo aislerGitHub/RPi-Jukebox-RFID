@@ -162,8 +162,19 @@ Also see [Troubleshooting: headphone audio unavailable after unplugging HDMI](ht
 
 ## 6. Install Phoniebox software
 
-If you want to install the **Spotify+ version**, [read this first](https://github.com/MiczFlor/RPi-Jukebox-RFID/wiki/Spotify-FAQ).
-
+### Optional pre-steps for Spotify installation
+* If you want to install the **Spotify+ version**, [read this first](https://github.com/MiczFlor/RPi-Jukebox-RFID/wiki/Spotify-FAQ) and add Mopidy to your trusted package sources:
+* Add the Mopidy archive’s GPG key:
+```
+sudo mkdir -p /usr/local/share/keyrings
+sudo wget -q -O /usr/local/share/keyrings/mopidy-archive-keyring.gpg \
+  https://apt.mopidy.com/mopidy.gpg
+```
+* Add the Mopidy APT repo to your package sources:
+```
+sudo wget -q -O /etc/apt/sources.list.d/mopidy.list https://apt.mopidy.com/buster.list
+```
+### Regular installation with and without Spotify
 Run the following command in your SSH terminal and follow the instructions
 
 ```
